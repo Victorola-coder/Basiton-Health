@@ -1,24 +1,25 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html',"./src/**/*.{html,js}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx}"
+  ],
   theme: {
     extend: {
-       screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
-      },
-      colors: {
-        basitonGreen:"#0E563F",
-        basitonGreenLight:"#85B839",
-        basitonWhite:"#FFFFFF",
-        basitonGray:"#0E563F0D"   
-      },
-      fontFamily: {
-        'dmSans': ['DM Sans'],
-        'heldisplay' :['Heldane Display']
-      },
+      colors:{
+        textColor: "#141414",
+        primary: "#0E563F",
+        secondary: "rgba(14, 86, 63, 0.05)"
+      }
     },
+    fontFamily: {
+      primary: "heldane"
+    }
+    
   },
-  plugins: [],
-}
+  plugins: []
+};

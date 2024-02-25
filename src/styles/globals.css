@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=DM+Sans&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding:0;
+}
+
+@font-face {
+  font-family: heldane;
+  src: url("../assets/fonts/TestHeldaneDisplay-Regular.otf");
+}
+@layer components {
+
+.des {
+    margin: 0 auto;
+    width: 500px;
+    height: 100px;
+    position: relative;
+    bottom:6rem;
+    overflow: hidden;
+    
+  }
+
+  .des:after {
+    content: "";
+    position: absolute;
+      bottom: 0;
+      right: -5%;
+      left: -5%;
+      height: 120px;
+      background: #fff;
+      -webkit-clip-path: ellipse(50% 60% at 50% 100%);
+      clip-path: ellipse(50% 60% at 50% 100%);
+  }
+.de {
+    margin: 0 auto;
+    width: 500px;
+    height: 100px;
+    position: relative;
+    top:5rem;
+    overflow: hidden;
+    transform: rotate(180deg);
+  }
+
+  .de:after {
+    content: "";
+    position: absolute;
+      bottom: 0;
+      right: -5%;
+      left: -5%;
+      height: 120px;
+      background: #fff;
+      -webkit-clip-path: ellipse(50% 60% at 50% 100%);
+      clip-path: ellipse(50% 60% at 50% 100%);
+  }
+}
